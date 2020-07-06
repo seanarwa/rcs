@@ -13,8 +13,8 @@
 
 service: rcs
 # app and org for use with dashboard.serverless.com
-#app: your-app-name
-#org: your-org-name
+app: untie
+org: seanarwa
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -22,7 +22,10 @@ service: rcs
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: python3.7
+
+outputs:
+  custom-output: any-value-here
 
 # you can overwrite defaults here
 #  stage: dev
@@ -51,10 +54,10 @@ provider:
 # you can add packaging information here
 #package:
 #  include:
-#    - include-me.js
+#    - include-me.py
 #    - include-me-dir/**
 #  exclude:
-#    - exclude-me.js
+#    - exclude-me.py
 #    - exclude-me-dir/**
 
 functions:
